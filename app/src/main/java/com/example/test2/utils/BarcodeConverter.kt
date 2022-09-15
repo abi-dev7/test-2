@@ -14,7 +14,7 @@ class BarcodeConverter {
             val multiFormatWriter =  MultiFormatWriter();
             var bitmap: Bitmap? = null;
             try {
-                val bitMatrix = multiFormatWriter.encode(text, BarcodeFormat.CODABAR,600,400);
+                val bitMatrix = multiFormatWriter.encode(text, BarcodeFormat.CODE_39,600,400);
                 val barcodeEncoder = BarcodeEncoder();
                 bitmap = barcodeEncoder.createBitmap(bitMatrix);
             } catch (e: WriterException) {
